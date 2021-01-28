@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?&family=Oxygen&display=swap" rel="stylesheet">
+        <title>Pokefinder | Tu Pokédex en Web</title>
+    </head>
+    <body>
+        <header>
+                <img src="./images/pokelogo.png" alt="Logo Pokémon">
+        </header>
+        <div class="search-area" id="search-area-div">
+            <div class="title-input">
+                <h1 id="title">¡Busca tu Pokémon favorito!</h1>
+                <input id="input-search" onfocus="this.value=''" type="search" placeholder="Nombre o ID Pokémon" list="lista-pokes" spellcheck="false">
+                <datalist id="lista-pokes"></datalist>
+                <br>
+                <button id="search-button">BUSCAR</button>
+            </div>
+        </div>
+        <div class="pokedex" id="pokedex-div">
+            <div class="poke-image">
+                <img id="pokemon" src="./images/pokedex.png" alt="Pokédex">
+            </div>
+            <div class="info" id="info">
+                    <h1 id="nombre">Nombre</h1>
+                    <div class="linea-btn">
+                        <button id="tipo-1" tabindex="-1">Tipo1</button>
+                        <button id="tipo-2" tabindex="-1">Tipo2</button>
+                    </div>
+                <div class="secundario" id="secundario">
+                    <p>ID: <span id="span-id"></span></p>
+                    <p>Altura: <span id="span-altura"></span></p>
+                    <p>Peso: <span id="span-peso"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="comenzar-btn">
+            <button id="inicio-btn">COMENZAR</button>
+        </div>
+        <div class="botones" id="botones-div">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
+        <script src="pokeapi.js"></script>
+    </body>
+</html>
